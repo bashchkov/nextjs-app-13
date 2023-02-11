@@ -1,5 +1,6 @@
 import type {ReactNode} from 'react'
-import AppLayout        from '@/app/apps/AppLayout'
+import AppLayout        from '@/components/AppLayout'
+
 
 export default function EmployeesLayout({
   children,
