@@ -5,7 +5,7 @@ import { useTranslation } from '../i18n'
 import { Header } from './components/Header'
 import { Footer } from './components/Footer'
 
-export default async function Page({ params: { lng } }) {
+export default async function Page({ params: { lng } }: { params: { lng: string; } }) {
   if (languages.indexOf(lng) < 0) lng = fallbackLng
   const { t } = await useTranslation(lng)
 
@@ -21,10 +21,10 @@ export default async function Page({ params: { lng } }) {
         <div style={{ width: '100%' }}>
           <p>
             <Trans t={t} i18nKey="blog.text">
-              Check out the corresponding <a href={t('blog.link')}>blog post</a> describing this example.
+              Check out the corresponding <a href={''}>blog post</a> describing this example.
             </Trans>
           </p>
-          <a href={t('blog.link')}>
+          <a href={''}>
             <img
               style={{ width: '50%' }}
               src="https://locize.com/blog/next-13-app-dir-i18n/next-13-app-dir-i18n.jpg"
