@@ -1,9 +1,21 @@
-import { languages, fallbackLng } from '../i18n/settings'
-import { useTranslation } from '../i18n'
+import {
+  fallbackLng,
+  languages
+}                         from '@app/i18n/settings'
+import {useTranslation}   from '@app/i18n'
+import {StaticParamsType} from '@app/[lng]/layout'
 
-export default async function Head({ params: { lng } }) {
+
+const Head = async ({
+  params: {
+    lng
+  }
+}: {
+  params: StaticParamsType;
+}) => {
+
   if (languages.indexOf(lng) < 0) lng = fallbackLng
-  const { t } = await useTranslation(lng)
+  const {t} = await useTranslation(lng)
 
   return (
     <>
@@ -15,3 +27,5 @@ export default async function Head({ params: { lng } }) {
     </>
   )
 }
+
+export default Head
