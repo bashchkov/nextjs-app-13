@@ -1,5 +1,3 @@
-import './global.css'
-
 import type {PropsWithChildren} from 'react'
 import {dir}                    from 'i18next'
 import {languages}              from '@app/i18n/settings'
