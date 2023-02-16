@@ -3,7 +3,6 @@ import './global.css'
 import type {PropsWithChildren} from 'react'
 import {dir}                    from 'i18next'
 import {languages}              from '@app/i18n/settings'
-import { Button } from '@mui/material';
 
 export type StaticParamsType = {
   lng: string;
@@ -22,7 +21,6 @@ const RootLayout = ({
   <html lang={lng} dir={dir(lng)}>
   <head/>
   <body>
-  <Button variant="contained">Test</Button>
   {children}
   </body>
   </html>

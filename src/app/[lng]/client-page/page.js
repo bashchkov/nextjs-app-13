@@ -1,10 +1,11 @@
 'use client'
 
-import Link from 'next/link'
+import Link               from 'next/link'
 import { useTranslation } from '../../i18n/client'
-import { Header } from '../components/Header'
-import { Footer } from '../components/Footer/client'
-import { useState } from 'react'
+import { Header }         from '../components/Header'
+import { Footer }         from '../components/Footer/client'
+import { useState }       from 'react'
+import {Button}           from '@mui/material'
 
 export default function Page({ params: { lng } }) {
   const { t } = useTranslation(lng, 'client-page')
@@ -13,6 +14,7 @@ export default function Page({ params: { lng } }) {
     <>
       <main>
         <Header heading={t('h1')} />
+        <Button variant="contained">Test</Button>
         <p>{t('counter', { count: counter })}</p>
         <div>
           <button onClick={() => setCounter(Math.max(0, counter - 1))}>-</button>
