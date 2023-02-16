@@ -6,7 +6,7 @@ export type StaticParamsType = {
   lng: string;
 };
 
-export const generateStaticParams = async (): Promise<StaticParamsType[]> => languages.map((lng) => ({lng}))
+// export const generateStaticParams = async (): Promise<StaticParamsType[]> => languages.map((lng) => ({lng}))
 
 const RootLayout = ({
   children,
