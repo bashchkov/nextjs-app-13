@@ -1,12 +1,11 @@
-import { use } from 'react';
-
-
-export default function Page() {
-
-
+export default function Page({
+  params
+}: {
+  params: any;
+}) {
   return (
-    <div className="space-y-4">
+    <div>
 
     </div>
-  );
+  )
 }

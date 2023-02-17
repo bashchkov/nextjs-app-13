@@ -5,5 +5,10 @@ export default function Template({
 }: {
   children: ReactNode;
 }) {
-  return <>{children}</>
+  return (
+    <div className='box'>
+      <h6>Template</h6>
+      {children}
+    </div>
+  )
 }

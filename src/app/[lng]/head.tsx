@@ -3,7 +3,6 @@ import {
   languages
 }                         from '@app/i18n/settings'
 import {useTranslation}   from '@app/i18n'
-import {StaticParamsType} from '@app/[lng]/layout'
 
 
 const Head = async ({
@@ -11,7 +10,9 @@ const Head = async ({
     lng
   }
 }: {
-  params: StaticParamsType;
+  params: {
+    lng: string;
+  };
 }) => {
 
   if (languages.indexOf(lng) < 0) lng = fallbackLng

@@ -1,4 +1,12 @@
-export default function Layout({ children, params }: { children: React.ReactNode, params: any }) {
+import type {ReactNode} from 'react'
+
+export default function Layout({
+  children,
+  params
+}: {
+  children: ReactNode;
+  params: any;
+}) {
 
   return (
     <div className="space-y-9">
@@ -10,5 +18,5 @@ export default function Layout({ children, params }: { children: React.ReactNode
 
       <div>{children}</div>
     </div>
-  );
+  )
 }

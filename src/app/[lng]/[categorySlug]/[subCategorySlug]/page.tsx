@@ -1,11 +1,12 @@
+export default function Page({
+  params
+}: {
+  params: any;
+}) {
 
-
-export default function Page({ params }: { params: any }) {
-  console.log(params)
   return (
     <div className="space-y-4">
       <div className="flex justify-between  space-x-3">
-
 
       </div>
 
@@ -13,5 +14,5 @@ export default function Page({ params }: { params: any }) {
 
       </div>
     </div>
-  );
+  )
 }
